@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class WeatherRequester {
-    private String addParamToURL(String URL, String[] param) {
+    String addParamToURL(String URL, String[] param) {
         return URL + param[0] + "=" + param[1] + "&";
     }
 
@@ -57,11 +57,5 @@ public class WeatherRequester {
             e.printStackTrace();
         }
         return false;
-    }
-
-    public static void main(String[] args) throws Exception {
-        WeatherRequester weatherRequester = new WeatherRequester();
-        boolean result = weatherRequester.request();
-        System.out.println(result);
     }
 }
